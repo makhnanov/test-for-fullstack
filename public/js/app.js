@@ -2091,24 +2091,24 @@ __webpack_require__.r(__webpack_exports__);
     return {
       todos: [{
         id: 1,
-        title: "delectus aut autem",
+        title: "Сделайте так, чтобы Vue получал список дел из БД (из таблицы todos)",
         description: "laboriosam mollitia et enim quasi adipisci quia provident illum",
         completed: false
-      }, {
-        id: 2,
-        title: "quo laboriosam deleniti aut qui",
-        description: null,
-        completed: false
-      }, {
-        id: 3,
-        title: "laboriosam mollitia et enim quasi adipisci quia provident illum",
-        description: null,
-        completed: true
       }, {
         id: 4,
         title: "repellendus sunt dolores architecto voluptatum",
         description: "accusamus eos facilis sint et aut voluptatem",
+        completed: true
+      }, {
+        id: 2,
+        title: "Добавьте сортировку списка дел. Все завершённые дела должны быть снизу",
+        description: null,
         completed: false
+      }, {
+        id: 3,
+        title: "Сделайте так, чтобы по нажатию на кнопку Delete все завершённые дела удалялись из массива. Удалять из БД их не нужно",
+        description: null,
+        completed: true
       }]
     };
   },
