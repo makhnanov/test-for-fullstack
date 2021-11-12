@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500;1,700&display=swap');
+@import "vars";
+
+// Include reboot
+@import "bootstrap";
+
+// Todoapp
+@import "todo/todo";
+
+// Author
+@import "author/author";
+
+// Buttons
+@import "buttons/btn";
+
+body {
+    min-width: 280px;
+}
+
+::selection {
+    background-color: $accent;
+}
+
+.app {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}

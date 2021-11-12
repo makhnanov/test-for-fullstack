@@ -1,0 +1,13 @@
+.btn {
+    background-color: $accent;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    transition: $transition-base;
+
+    &:hover {
+        background-color: $accent_hover;
+    }
+}
