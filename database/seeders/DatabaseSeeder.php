@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Todo;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Todo::factory(100)->create();
+        Todo::factory(100)->create();
     }
 }

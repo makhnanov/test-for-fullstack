@@ -13,7 +13,7 @@
 
     <div id="app" class="app">
         <todo-app></todo-app>
-        <span class="author">© 2021. Author Name</span>
+        <span class="author">© 2021. Bakirov Roman</span>
     </div>
     <!-- /#app.app -->
 

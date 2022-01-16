@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ezyang/htmlpurifier": "^4.14",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.65",
@@ -36,7 +37,8 @@
         "post-install-cmd": [
             "php -r \"chmod( __DIR__ . '/storage/logs', 0777);\"",
             "php -r \"chmod( __DIR__ . '/storage/framework/views', 0777);\"",
-            "php -r \"chmod( __DIR__ . '/storage/framework/sessions', 0777);\""
+            "php -r \"chmod( __DIR__ . '/storage/framework/sessions', 0777);\"",
+            "php -r \"chmod( __DIR__ . '/storage/framework/cache/htmlpurifier', 0777);\""
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

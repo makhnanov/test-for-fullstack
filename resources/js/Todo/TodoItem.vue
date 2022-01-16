@@ -1,24 +1,29 @@
 <template>
     <div class="todo__list-item" :class="{'todo__list-item_completed': todo.completed}" @click="toggleComplete">
         <div class="todo__list-item-info">
-            <h4 class="todo__list-item-info-title">{{ todo.title }}</h4>
-            <h6 class="todo__list-item-info-description">{{ todo.description }}</h6>
+            <div class="todo__list-item-info-title" v-html="todo.title"></div>
+            <div class="todo__list-item-info-description" v-html="todo.description"></div>
         </div>
-        <!-- /.todo__list-item-info -->
     </div>
-    <!-- /.todo__list-item -->
 </template>
 
 <script>
-    export default {
-        name: "TodoItem",
-        props: {
-            todo: Object,
-        },
-        methods: {
-            toggleComplete(){
-                this.todo.completed = !this.todo.completed
-            }
+export default {
+    name: 'TodoItem',
+    props: {
+        todo: Object,
+    },
+    methods: {
+        toggleComplete() {
+            this.todo.completed = !this.todo.completed
+            axios.patch('http://localhost/api/todo', {
+                params: {
+                    id: this.todo.id,
+                    completed: this.todo.completed
+                }
+            })
+            this.$emit('sort')
         }
     }
+}
 </script>
