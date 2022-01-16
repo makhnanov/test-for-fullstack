@@ -63,8 +63,16 @@
 - Добавлен функционал сортировки на фронте * с анимацией
 - Добавлен функционал поиска (подсветки совпадения) на фронте *
 
-Проверка:
+# Как проверить:
 ```shell
+docker stop $(docker ps -aq)
+git clone https://github.com/makhnanov/test-for-fullstack /var/www/bakirov-test
+cd /var/www/bakirov-test
+make run-up
+make run-composer-install
+make run-npm-i
+make run-migrate
+make run-seed
 xdg-open http://localhost/
 ```
 На решение задания потрачено 5 часов
