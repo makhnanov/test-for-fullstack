@@ -26,12 +26,12 @@ class TodoController extends Controller
         $purifier = new HTMLPurifier($config);
         try {
             $params = request('params');
-            if (!$params['title'] || !$params['description']) {
+            if (!$params['title']) {
                 throw new \Exception('Invalid data');
             }
             $todo = new Todo();
             $todo->title = $purifier->purify($params['title']);
-            $todo->description = $purifier->purify($params['description']);
+            $todo->description = $purifier->purify($params['description'] ?? '');
             $todo->save();
         } catch (\Throwable $e) {
             return response()->json([

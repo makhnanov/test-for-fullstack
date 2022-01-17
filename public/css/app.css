@@ -481,8 +481,7 @@ progress {
   width: 100%;
   max-width: 420px;
   height: 100%;
-  max-height: 540px;
-  min-height: 540px;
+  max-height: 800px;
   display: flex;
   flex-flow: column nowrap;
   border-radius: 20px;
@@ -519,9 +518,6 @@ progress {
 }
 .todo__head {
   width: 100%;
-  /*display: flex;*/
-  /*align-items: center;*/
-  /*justify-content: space-between;*/
   margin-bottom: 20px;
 }
 .todo__head-title {

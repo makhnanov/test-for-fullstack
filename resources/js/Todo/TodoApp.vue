@@ -76,21 +76,29 @@ export default {
         },
         search: function (val) {
             for (let i in this.todos) {
-                this.todos[i].title = this.todos[i].title.replace(/<\/?[^>]+(>|$)/g, "")
-                this.todos[i].description = this.todos[i].description.replace(/<\/?[^>]+(>|$)/g, "")
+                if (this.todos[i].title) {
+                    this.todos[i].title = this.todos[i].title.replace(/<\/?[^>]+(>|$)/g, "")
+                }
+                if (this.todos[i].description) {
+                    this.todos[i].description = this.todos[i].description.replace(/<\/?[^>]+(>|$)/g, "")
+                }
             }
             if (!val) {
                 return
             }
             for (let i in this.todos) {
-                this.todos[i].title = this.todos[i].title.replace(
-                    new RegExp(val, 'g'),
-                    '<span style="background-color: #83831c">' + val + '</span>'
-                )
-                this.todos[i].description = this.todos[i].description.replace(
-                    new RegExp(val, 'g'),
-                    '<span style="background-color: #83831c">' + val + '</span>'
-                )
+                if (this.todos[i].title) {
+                    this.todos[i].title = this.todos[i].title.replace(
+                        new RegExp(val, 'g'),
+                        '<span style="background-color: #83831c">' + val + '</span>'
+                    )
+                }
+                if (this.todos[i].description) {
+                    this.todos[i].description = this.todos[i].description.replace(
+                        new RegExp(val, 'g'),
+                        '<span style="background-color: #83831c">' + val + '</span>'
+                    )
+                }
             }
         }
     },

@@ -34,10 +34,6 @@ export default {
                 alert('Title can\'t be empty.');
                 return
             }
-            if (!this.description) {
-                alert('Description can\'t be empty.');
-                return
-            }
             axios.post('http://localhost/api/todo', {
                 params: {
                     title: this.title,

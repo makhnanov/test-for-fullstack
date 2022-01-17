@@ -2156,8 +2156,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     search: function search(val) {
       for (var i in this.todos) {
-        this.todos[i].title = this.todos[i].title.replace(/<\/?[^>]+(>|$)/g, "");
-        this.todos[i].description = this.todos[i].description.replace(/<\/?[^>]+(>|$)/g, "");
+        if (this.todos[i].title) {
+          this.todos[i].title = this.todos[i].title.replace(/<\/?[^>]+(>|$)/g, "");
+        }
+
+        if (this.todos[i].description) {
+          this.todos[i].description = this.todos[i].description.replace(/<\/?[^>]+(>|$)/g, "");
+        }
       }
 
       if (!val) {
@@ -2165,8 +2170,13 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       for (var _i in this.todos) {
-        this.todos[_i].title = this.todos[_i].title.replace(new RegExp(val, 'g'), '<span style="background-color: #83831c">' + val + '</span>');
-        this.todos[_i].description = this.todos[_i].description.replace(new RegExp(val, 'g'), '<span style="background-color: #83831c">' + val + '</span>');
+        if (this.todos[_i].title) {
+          this.todos[_i].title = this.todos[_i].title.replace(new RegExp(val, 'g'), '<span style="background-color: #83831c">' + val + '</span>');
+        }
+
+        if (this.todos[_i].description) {
+          this.todos[_i].description = this.todos[_i].description.replace(new RegExp(val, 'g'), '<span style="background-color: #83831c">' + val + '</span>');
+        }
       }
     }
   },
