@@ -55,3 +55,11 @@ export default {
     }
 }
 </script>
+
+<style>
+.todo__list_h {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+</style>
